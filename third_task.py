@@ -63,7 +63,7 @@ def appearance(intervals: dict) -> int:
     tutor = clean_times(intervals["tutor"])
 
     sum = 0
-    # Cнова проверяем вложенность таймстепов через два цикла
+    # Проверяем вложенность таймстепов через два цикла
     for i in range(0, len(tutor), 2):
         for j in range(0, len(pupil), 2):
             # Проверка на вариант 1
