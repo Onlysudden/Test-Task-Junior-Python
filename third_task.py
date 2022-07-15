@@ -56,7 +56,7 @@ def clean_times(dirt_list:list) -> list:
     clean_list.append(dirt_list.pop(0))
     return clean_list
 
-def appearance(intervals):
+def appearance(intervals: dict) -> int:
     # Сохраняем значения из словаря и проводим их через очищающую функцию
     s1, s2 = clean_times(intervals["lesson"])
     pupil = clean_times(intervals["pupil"])
