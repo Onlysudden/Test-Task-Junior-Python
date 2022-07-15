@@ -38,9 +38,10 @@ def count_animals() -> dict:
                 break
             d[letter] += len(group.find_all('li'))
         
+        # Добавил подсчет для видимости работы программы
         count += 1
         print(f"Страниц обработано: {count}")
-        # Парсим, создаем ссылку на следующую страницу и делаем запрос новой страницы. Возвращаемся обратно
+        # Парсим и создаем ссылку на следующую страницу. Делаем запрос новой страницы. Возвращаемся обратно
         link = soup.find("div", id="mw-pages").find("a", text="Следующая страница")
         url = "https://ru.wikipedia.org/" + link.get('href')
         req = requests.get(url, headers=headers)
